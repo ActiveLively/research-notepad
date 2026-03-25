@@ -49,7 +49,7 @@ def constraints(x):
 bounds = ((5.0, 50.0), (4.0, 45.0))
 
 # Initial guess in cm
-x0 = [27.0, 25.0]
+x0 = [47.0, 45.0]
 
 cons = {'type': 'ineq', 'fun': constraints}
 
