@@ -90,7 +90,6 @@ def calc_error(q):
     rot_error = np.linalg.norm(current_rot - target_rot)
     
     # Combine the errors. 
-    # We multiply rot_error by a weight (e.g., 0.1 or 0.5) to balance meters and radians
     total_error = pos_error + (0.2 * rot_error) 
     
     return total_error
@@ -126,7 +125,7 @@ ax.set_zlim([0, 1.0])
 
 line, = ax.plot([], [], [], 'o-', lw=4, color='#2c3e50', markersize=8)
 
-# 4. Plot the Target Position as a red star so we can visually verify it hits the mark!
+# 4. Plot the Target Position as a red star so we can visually verify it hits the mark
 ax.scatter(*target_pos, color='red', s=200, marker='*', label='Target Position')
 ax.legend()
 
